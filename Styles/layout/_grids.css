@@ -1,0 +1,61 @@
+.jumbotron-grip {
+    min-height: calc(100vh - 55px);
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.jumbotron-grid img {
+    width: 100%;
+    border-radius: 80px;
+}
+
+.socialnets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+}
+
+
+.socialnets-grid i {
+    font-size: 2rem;
+}
+
+.aboutme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.aboutme-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+}
+
+.aboutme-items-grid .item {
+    width: 200px;
+    height: 80px;
+}
+
+.aboutme-items-grid .item img {
+    width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.contact-grid > div:nth-child(2) {
+    width: fit-content;
+    height: fit-content;
+    place-self: center;
+}   
