@@ -1,85 +1,85 @@
-/* NORMALIZACIÓN:  */
+/* NORMALIZACION */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* Esto mantiene el ancho y alto a pesar de padding y border*/
+    box-sizing: border-box;
     font-family: 'Inconsolata', monospace;
-    list-style: none; /* Quitar los puntos e decoración de las listas */
-    text-decoration: none; /* Esto quita el subrayado de los enlaces */
+    list-style: none;
+    text-decoration: none;
     color: white;
 }
 
 html {
-    scroll-behavior: smooth; /* Esto hace que al hacer click en un link con # baje suavecito en vez de saltar */
+    scroll-behavior: smooth;
 }
 
 body{
-    background-color: #131313; /* mismo color oscuro que el final del gradiente del hero */
+    background-color: #131313;
 }
 
 header {
-    position: fixed; /* Esto hace que el haader se quede fijo en la parte superior */
+    position: fixed;
     right: 0;
     top: 0;
-    z-index: 100; /* Esto hace que el header se muestre por encima*/
+    z-index: 100;
     width: 100%;
-    display: flex; /* Esto hará que los elementos se pongan en linea */
-    align-items: center; /* Centra verticalmente */
-    justify-content: space-between; /* Que los elementos se separen */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 15px 3%;
-    background-color: rgba(19, 19, 19, 0.6); /* fondo semi transparente para que el texto de abajo no se mezcle con el menú al scrollear */
-    backdrop-filter: blur(8px); /* desenfoca lo que pasa por detrás del header */
+    background-color: rgba(19, 19, 19, 0.6);
+    backdrop-filter: blur(8px);
 }
 
 .logo {
     font-size: 30px;
-    font-weight: 800; /* este es el grueso de las letras */
+    font-weight: 800;
 }
 
 .navlist {
-    display: flex; /* Esto sirve para que los elementos de la lista UL se pongan en linea*/
+    display: flex;
 }
 
 .navlist a {
-    margin-left: 60px; /* es para separar las palabras */
+    margin-left: 60px;
     font-size: 15px;
     font-weight: 600;
-    border-bottom: 2px solid transparent; /* este es un subrayado transparente */
-    transition: all .5s ease; /* esto es para animar todas las caracteristicas del .navlist a */
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease;
 }
 
 .navlist a:hover {
-    border-bottom: 2px solid white; /* este es un subrayado blanco que aparecerá cuando hacemos estamos encima con el mouse */
+    border-bottom: 2px solid white;
 }
 
  #menu-icon{
-    display: none;  /* lo pongo en none para que solo se vea cuando la página esté colapsada de forma horizontal */
+    display: none;
 } 
 
 #menu-icon{
     font-size: 35px;
-    z-index: 101; /* para que este sobre el header */
-    cursor: pointer; /* para que aparezca la manito cuando ponemos el mouse encima */
+    z-index: 101;
+    cursor: pointer;
 }
 
 #menu-toggle{
-    display: none; /* nunca quiero que se vea el checkbox*/
+    display: none;
 }
 
 .menu-icon-action{
-    display: none; /* para que no se le pueda hacer click*/
+    display: none;
 }
 
 .hero{
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /* fondo de color gradiente */
-    position: relative; /* Para que sea relativo al contenedor (nos permite usar top, bottom, left y right) */
-    display: grid; /* Para que el hero se pueda dividir en dos columnas */
-    grid-template-columns: 1fr 1fr; /* las 2 columnas */
-    align-items: center; /* para alinear verticalmente el hero */
-    gap: 2rem; /* haya espacio de 2 rem entre las dos columnas */
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
 }
 
 section{
@@ -115,7 +115,7 @@ section{
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: all 5s linear; /* esto hace que la transición sea lineal */
+    transition: all 5s linear;
 }
 
 .hero-img img:hover {
@@ -191,15 +191,10 @@ section{
     transform: translateY(-5px);
 }
 
-
-/* ===================== SECCIONES NUEVAS ===================== */
-
-/* Esto evita que el header fijo tape el título cuando saltás a una sección */
 section[id] {
     scroll-margin-top: 70px;
 }
 
-/* Títulos de sección (Proyectos, Sobre mí, Contacto) */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -219,7 +214,7 @@ section[id] {
     font-size: 40px;
 }
 
-/* ---------- PORTFOLIO ---------- */
+/*  PORTFOLIO  */
 
 .portfolio {
     padding-top: 100px;
@@ -228,7 +223,6 @@ section[id] {
 
 .portfolio-grid {
     display: grid;
-    /* columnas automáticas: entran las que quepan, cada una de mínimo 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
@@ -236,23 +230,22 @@ section[id] {
 .project-card {
     background-color: #1c2a2e;
     border-radius: 15px;
-    overflow: hidden; /* para que la imagen respete las esquinas redondeadas */
+    overflow: hidden;
     transition: all .5s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px); /* la tarjeta "sube" un poco */
+    transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(56, 94, 112, 0.4);
 }
 
 .project-img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* la imagen llena el espacio sin deformarse */
+    object-fit: cover;
     display: block;
 }
 
-/* Caja gris que se muestra mientras no hay imagen */
 .project-img.placeholder {
     background: linear-gradient(245.59deg, #31494e 0%, #385e70 50%, #21383d 100%);
     display: flex;
@@ -292,7 +285,7 @@ section[id] {
     border-bottom: 2px solid white;
 }
 
-/* ---------- SOBRE MÍ ---------- */
+/*  SOBRE MI  */
 
 .about {
     padding-top: 100px;
@@ -302,7 +295,7 @@ section[id] {
 
 .about-content {
     max-width: 750px;
-    margin: 0 auto; /* centra el bloque */
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -315,7 +308,7 @@ section[id] {
 
 .skills {
     display: flex;
-    flex-wrap: wrap; /* si no entran en una fila, pasan a la siguiente */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
     margin: 30px 0 40px;
@@ -328,7 +321,6 @@ section[id] {
     font-size: 14px;
 }
 
-/* Botón reutilizable (lo usamos en Sobre mí) */
 .btn {
     display: inline-block;
     background-color: #4d4d4d;
@@ -347,7 +339,7 @@ section[id] {
     transform: translateX(8px);
 }
 
-/* ---------- PÁGINA DE CONTACTO ---------- */
+/*  PAGINA DE CONTACTO  */
 
 .contact {
     min-height: 100vh;
@@ -403,10 +395,10 @@ section[id] {
 .contact-card span {
     font-size: 14px;
     color: #c9d6d9;
-    word-break: break-all; /* para que el mail largo no se salga de la tarjeta */
+    word-break: break-all;
 }
 
-/* ---------- FOOTER ---------- */
+/*  FOOTER  */
 
 footer {
     text-align: center;
@@ -415,9 +407,6 @@ footer {
     color: #9fb8be;
     border-top: 1px solid #21383d;
 }
-
-
-/* Aca vamos a hacer mediaqueries para que la web sea responsive */
 
 @media (max-width:992px){
     section {
@@ -501,7 +490,7 @@ footer {
 
 
 }
-/* Ajustes de las secciones nuevas en celular */
+
 @media (max-width: 768px) {
     .section-title h2 {
         font-size: 30px;
