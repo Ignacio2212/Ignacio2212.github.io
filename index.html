@@ -48,7 +48,8 @@
     <!--  HERO SECTION  -->
     <section class="hero" id="home">
         <div class="hero-text">
-            <h5>Frontend Developer</h5>
+            <!-- El texto lo escribe script.js letra por letra -->
+            <h5><span id="typing"></span><span class="cursor">|</span></h5>
             <h1>Ignacio Maidana</h1>
             <p>Aprendé todas las tecnologías conmigo y podrás obtener tu <br>
                 primer trabajo de desarrollador web al finalizar este curso.
@@ -66,7 +67,7 @@
     <!--  ICONOS  -->
     <div class="icons">
         <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-github-fill"></i></a>
+        <a href="https://github.com/Ignacio2212" target="_blank"><i class="ri-github-fill"></i></a>
     </div>
 
     <!--  FLECHA  -->
@@ -176,13 +177,16 @@
             </a>
 
             <!--  Gmail  -->
-            <a href="mailto:tumail@gmail.com" class="contact-card">
-                <i class="ri-mail-line"></i>
+            <div class="contact-card">
+                <a href="mailto:tumail@gmail.com"><i class="ri-mail-line"></i></a>
                 <div>
                     <h3>Gmail</h3>
                     <span>tumail@gmail.com</span>
+                    <button class="copy-btn" id="copy-email" data-email="tumail@gmail.com">
+                        <i class="ri-file-copy-line"></i> Copiar mail
+                    </button>
                 </div>
-            </a>
+            </div>
 
             <!--  LinkedIn  -->
             <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="contact-card">
@@ -194,11 +198,11 @@
             </a>
 
             <!--  GitHub  -->
-            <a href="https://github.com/tu-usuario" target="_blank" class="contact-card">
+            <a href="https://github.com/Ignacio2212" target="_blank" class="contact-card">
                 <i class="ri-github-fill"></i>
                 <div>
                     <h3>GitHub</h3>
-                    <span>@tu-usuario</span>
+                    <span>@Ignacio2212</span>
                 </div>
             </a>
 
@@ -225,7 +229,8 @@
 
     <!--  FOOTER  -->
     <footer>
-        <p> 2026 Ignacio Maidana</p>
+        <p>© 2026 Ignacio Maidana</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
