@@ -1,13 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la web -->
     <title>Ignacio Maidana</title>
-    <!-- Esta es la importación de nuestro archivo CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxicons -->
@@ -27,18 +24,18 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!--  HEADER  -->
     <header>
-        <!-- LOGO -->
+        <!--  LOGO  -->
         <a href="#home" class="logo">Ignacio Maidana</a>
 
-        <!-- Menú responsive -->
+        <!--  Menu  -->
         <input type="checkbox" name="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon-action">
             <div class='bx bx-menu' id="menu-icon"></div>
         </label>
 
-        <!-- Navegación -->
+        <!--  Navegacion  -->
         <ul class="navlist">
             <li><a href="#home">Home</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -48,7 +45,7 @@
 
     </header>
 
-    <!-- HERO SECTION -->
+    <!--  HERO SECTION  -->
     <section class="hero" id="home">
         <div class="hero-text">
             <h5>Frontend Developer</h5>
@@ -66,18 +63,18 @@
 
     </section>
 
-    <!-- ÍCONOS -->
+    <!--  ICONOS  -->
     <div class="icons">
         <a href="#"><i class="ri-instagram-line"></i></a>
         <a href="#"><i class="ri-github-fill"></i></a>
     </div>
 
-    <!-- FLECHA -->
+    <!--  FLECHA  -->
     <div class="scroll-down">
         <a href="#portfolio"><i class="ri-arrow-down-s-fill"></i></a>
     </div>
 
-    <!-- PORTFOLIO / PROYECTOS -->
+    <!--  PROYECTOS  -->
     <section class="portfolio" id="portfolio">
         <div class="section-title">
             <h5>Mis trabajos</h5>
@@ -85,28 +82,12 @@
         </div>
 
         <div class="portfolio-grid">
-
-            <!--
-                PARA AGREGAR UN PROYECTO REAL, copiá este bloque y cambiá los datos:
-
-                <article class="project-card">
-                    <img src="img/mi-proyecto.jpg" alt="Captura de mi proyecto" class="project-img">
-                    <div class="project-info">
-                        <h3>Nombre del proyecto</h3>
-                        <p>Breve descripción de qué hace y con qué tecnologías lo hiciste.</p>
-                        <a href="LINK-AL-PROYECTO" target="_blank">Ver proyecto <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </article>
-
-                (Creá una carpeta "img" al lado del index.html y guardá ahí las capturas)
-            -->
-
-            <!-- Tarjetas de ejemplo hasta que tengas proyectos -->
             <article class="project-card">
-                <div class="project-img placeholder"><i class="ri-image-line"></i></div>
+                <img src="torneo/img/logo-torneo.png" alt="Logo THE 0.0 LEAGUE" class="project-img" style="object-fit: contain; background: white;">
                 <div class="project-info">
-                    <h3>Próximamente</h3>
-                    <p>Acá va a aparecer mi primer proyecto, con una captura y una breve descripción.</p>
+                    <h3>THE 0.0 LEAGUE</h3>
+                    <p>Torneo de HaxBall 1vs1 que organizamos en UADE con Heineken 0.0 como sponsor. Hice la página con HTML y CSS: llaves, podio, reglamento y galería.</p>
+                    <a href="torneo/">Ver proyecto <i class="ri-arrow-right-up-line"></i></a>
                 </div>
             </article>
 
@@ -129,7 +110,7 @@
         </div>
     </section>
 
-    <!-- SOBRE MÍ -->
+    <!--  SOBRE MI  -->
     <section class="about" id="sobre-mi">
         <div class="section-title">
             <h5>Conoceme</h5>
@@ -149,7 +130,7 @@
                 a mis herramientas.
             </p>
 
-            <!-- Tecnologías -->
+            <!--  Tecnologias  -->
             <ul class="skills">
                 <li>HTML</li>
                 <li>CSS</li>
@@ -163,7 +144,7 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!--  CONTACTO  -->
     <section class="contact" id="contacto">
         <div class="section-title">
             <h5>Hablemos</h5>
@@ -173,15 +154,10 @@
         <p class="contact-intro">
             ¿Tenés un proyecto, una propuesta o simplemente querés charlar? Escribime por cualquiera de estos medios.
         </p>
-
-        <!--
-            CAMBIÁ LOS DATOS DE EJEMPLO POR LOS TUYOS:
-            - En el href va el link (lo que pasa al hacer click)
-            - En el <span> va el texto que se ve
-        -->
+        
         <div class="contact-grid">
 
-            <!-- WhatsApp -->
+            <!--  WhatsApp  -->
             <a href="https://wa.me/5491100000000" target="_blank" class="contact-card">
                 <i class="ri-whatsapp-line"></i>
                 <div>
@@ -190,7 +166,7 @@
                 </div>
             </a>
 
-            <!-- Celular -->
+            <!--  Celular  -->
             <a href="tel:+5491100000000" class="contact-card">
                 <i class="ri-phone-line"></i>
                 <div>
@@ -199,7 +175,7 @@
                 </div>
             </a>
 
-            <!-- Gmail -->
+            <!--  Gmail  -->
             <a href="mailto:tumail@gmail.com" class="contact-card">
                 <i class="ri-mail-line"></i>
                 <div>
@@ -208,7 +184,7 @@
                 </div>
             </a>
 
-            <!-- LinkedIn -->
+            <!--  LinkedIn  -->
             <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="contact-card">
                 <i class="ri-linkedin-box-line"></i>
                 <div>
@@ -217,7 +193,7 @@
                 </div>
             </a>
 
-            <!-- GitHub -->
+            <!--  GitHub  -->
             <a href="https://github.com/tu-usuario" target="_blank" class="contact-card">
                 <i class="ri-github-fill"></i>
                 <div>
@@ -226,7 +202,7 @@
                 </div>
             </a>
 
-            <!-- Instagram -->
+            <!--  Instagram  -->
             <a href="https://www.instagram.com/tu-usuario" target="_blank" class="contact-card">
                 <i class="ri-instagram-line"></i>
                 <div>
@@ -235,7 +211,7 @@
                 </div>
             </a>
 
-            <!-- Ubicación -->
+            <!--  Ubicacion  -->
             <div class="contact-card">
                 <i class="ri-map-pin-line"></i>
                 <div>
@@ -247,11 +223,9 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!--  FOOTER  -->
     <footer>
-        <p>© 2026 Ignacio Maidana</p>
+        <p> 2026 Ignacio Maidana</p>
     </footer>
-
 </body>
-
 </html>
