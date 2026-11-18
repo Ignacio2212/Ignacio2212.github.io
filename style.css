@@ -1,101 +1,85 @@
-/* NORMALIZACION */
+/* NORMALIZACIÓN:  */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Esto mantiene el ancho y alto a pesar de padding y border*/
     font-family: 'Inconsolata', monospace;
-    list-style: none;
-    text-decoration: none;
+    list-style: none; /* Quitar los puntos e decoración de las listas */
+    text-decoration: none; /* Esto quita el subrayado de los enlaces */
     color: white;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Esto hace que al hacer click en un link con # baje suavecito en vez de saltar */
 }
 
 body{
-    background-color: #131313;
+    background-color: #131313; /* mismo color oscuro que el final del gradiente del hero */
 }
 
 header {
-    position: fixed;
+    position: fixed; /* Esto hace que el haader se quede fijo en la parte superior */
     right: 0;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Esto hace que el header se muestre por encima*/
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Esto hará que los elementos se pongan en linea */
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Que los elementos se separen */
     padding: 15px 3%;
-    background-color: rgba(19, 19, 19, 0.6);
-    backdrop-filter: blur(8px);
+    background-color: rgba(19, 19, 19, 0.6); /* fondo semi transparente para que el texto de abajo no se mezcle con el menú al scrollear */
+    backdrop-filter: blur(8px); /* desenfoca lo que pasa por detrás del header */
 }
 
 .logo {
     font-size: 30px;
-    font-weight: 800;
-/*  Efecto de escritura  */
-.cursor {
-    display: inline-block;
-    margin-left: 2px;
-    animation: parpadeo 0.8s infinite;
+    font-weight: 800; /* este es el grueso de las letras */
 }
 
 .navlist {
-    display: flex;
-@keyframes parpadeo {
-    0%, 50%   { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    display: flex; /* Esto sirve para que los elementos de la lista UL se pongan en linea*/
 }
 
 .navlist a {
-    margin-left: 60px;
+    margin-left: 60px; /* es para separar las palabras */
     font-size: 15px;
     font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all .5s ease;
-.hero-text h5 {
-    min-height: 20px;
+    border-bottom: 2px solid transparent; /* este es un subrayado transparente */
+    transition: all .5s ease; /* esto es para animar todas las caracteristicas del .navlist a */
 }
 
 .navlist a:hover {
-/*  Link del menu de la sección actual  */
-.navlist a.active {
-border-bottom: 2px solid white;
-    color: #9fd8e6;
+    border-bottom: 2px solid white; /* este es un subrayado blanco que aparecerá cuando hacemos estamos encima con el mouse */
 }
 
  #menu-icon{
-    display: none;
+    display: none;  /* lo pongo en none para que solo se vea cuando la página esté colapsada de forma horizontal */
 } 
 
 #menu-icon{
     font-size: 35px;
-    z-index: 101;
-    cursor: pointer;
+    z-index: 101; /* para que este sobre el header */
+    cursor: pointer; /* para que aparezca la manito cuando ponemos el mouse encima */
 }
 
 #menu-toggle{
-    display: none;
+    display: none; /* nunca quiero que se vea el checkbox*/
 }
 
 .menu-icon-action{
-    display: none;
+    display: none; /* para que no se le pueda hacer click*/
 }
 
 .hero{
     height: 100%;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-/*  Botón "Copiar mail"  */
-.copy-btn {
-    display: inline-flex;
-align-items: center;
-    gap: 2rem;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /* fondo de color gradiente */
+    position: relative; /* Para que sea relativo al contenedor (nos permite usar top, bottom, left y right) */
+    display: grid; /* Para que el hero se pueda dividir en dos columnas */
+    grid-template-columns: 1fr 1fr; /* las 2 columnas */
+    align-items: center; /* para alinear verticalmente el hero */
+    gap: 2rem; /* haya espacio de 2 rem entre las dos columnas */
 }
 
 section{
@@ -131,7 +115,7 @@ section{
     width: 400px;
     margin: 10% 0 0 10%;
     height: auto;
-    transition: all 5s linear;
+    transition: all 5s linear; /* esto hace que la transición sea lineal */
 }
 
 .hero-img img:hover {
@@ -159,13 +143,7 @@ section{
 }
 
 .hero-text a.videos{
-    gap: 5px;
-    margin-top: 8px;
-    padding: 5px 12px;
-    font-size: 13px;
-    font-family: 'Inconsolata', monospace;
-    color: white;
-background-color: transparent;
+    background-color: transparent;
     border: 1px solid white;
     margin-left:  20px;
 }
@@ -213,10 +191,15 @@ background-color: transparent;
     transform: translateY(-5px);
 }
 
+
+/* ===================== SECCIONES NUEVAS ===================== */
+
+/* Esto evita que el header fijo tape el título cuando saltás a una sección */
 section[id] {
     scroll-margin-top: 70px;
 }
 
+/* Títulos de sección (Proyectos, Sobre mí, Contacto) */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -236,7 +219,7 @@ section[id] {
     font-size: 40px;
 }
 
-/*  PORTFOLIO  */
+/* ---------- PORTFOLIO ---------- */
 
 .portfolio {
     padding-top: 100px;
@@ -245,6 +228,7 @@ section[id] {
 
 .portfolio-grid {
     display: grid;
+    /* columnas automáticas: entran las que quepan, cada una de mínimo 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
@@ -252,22 +236,23 @@ section[id] {
 .project-card {
     background-color: #1c2a2e;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden; /* para que la imagen respete las esquinas redondeadas */
     transition: all .5s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px); /* la tarjeta "sube" un poco */
     box-shadow: 0 10px 30px rgba(56, 94, 112, 0.4);
 }
 
 .project-img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* la imagen llena el espacio sin deformarse */
     display: block;
 }
 
+/* Caja gris que se muestra mientras no hay imagen */
 .project-img.placeholder {
     background: linear-gradient(245.59deg, #31494e 0%, #385e70 50%, #21383d 100%);
     display: flex;
@@ -307,7 +292,7 @@ section[id] {
     border-bottom: 2px solid white;
 }
 
-/*  SOBRE MI  */
+/* ---------- SOBRE MÍ ---------- */
 
 .about {
     padding-top: 100px;
@@ -317,7 +302,7 @@ section[id] {
 
 .about-content {
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0 auto; /* centra el bloque */
     text-align: center;
 }
 
@@ -330,19 +315,20 @@ section[id] {
 
 .skills {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* si no entran en una fila, pasan a la siguiente */
     justify-content: center;
     gap: 12px;
     margin: 30px 0 40px;
 }
 
 .skills li {
-border: 1px solid #385e70;
+    border: 1px solid #385e70;
     padding: 8px 18px;
     border-radius: 30px;
     font-size: 14px;
 }
 
+/* Botón reutilizable (lo usamos en Sobre mí) */
 .btn {
     display: inline-block;
     background-color: #4d4d4d;
@@ -361,7 +347,7 @@ border: 1px solid #385e70;
     transform: translateX(8px);
 }
 
-/*  PAGINA DE CONTACTO  */
+/* ---------- PÁGINA DE CONTACTO ---------- */
 
 .contact {
     min-height: 100vh;
@@ -412,30 +398,26 @@ border: 1px solid #385e70;
 .contact-card h3 {
     font-size: 16px;
     margin-bottom: 4px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all .3s ease;
 }
 
 .contact-card span {
     font-size: 14px;
     color: #c9d6d9;
-    word-break: break-all;
-.copy-btn:hover {
-    background-color: #385e70;
+    word-break: break-all; /* para que el mail largo no se salga de la tarjeta */
 }
 
-/*  FOOTER  */
+/* ---------- FOOTER ---------- */
 
 footer {
     text-align: center;
     padding: 25px;
-/* El icono dentro del boton no lleva el circulo de las otras tarjetas */
-.contact-card .copy-btn i {
-font-size: 14px;
+    font-size: 14px;
     color: #9fb8be;
     border-top: 1px solid #21383d;
 }
+
+
+/* Aca vamos a hacer mediaqueries para que la web sea responsive */
 
 @media (max-width:992px){
     section {
@@ -467,8 +449,6 @@ font-size: 14px;
     .scroll-down{
         display: none;
     }
-    padding: 0;
-    background: none;
 }
 
 @media (max-width: 768px){
@@ -520,12 +500,8 @@ font-size: 14px;
     }
 
 
-/* Cuando ya se copio: verde */
-.copy-btn.copied {
-    border-color: #3ddc84;
-    color: #3ddc84;
 }
-
+/* Ajustes de las secciones nuevas en celular */
 @media (max-width: 768px) {
     .section-title h2 {
         font-size: 30px;
@@ -534,15 +510,18 @@ font-size: 14px;
     .about-content p {
         font-size: 15px;
     }
-.copy-btn.copied i {
-    color: #3ddc84;
 }
-    
-/*  Efecto de escritura  */
+
+
+/* =========================================================
+   ESTILOS PARA LO QUE HACE EL JAVASCRIPT (script.js)
+   ========================================================= */
+
+/* ---------- Efecto de escritura ---------- */
 .cursor {
     display: inline-block;
     margin-left: 2px;
-    animation: parpadeo 0.8s infinite;
+    animation: parpadeo 0.8s infinite; /* el cursor titila */
 }
 
 @keyframes parpadeo {
@@ -550,17 +529,18 @@ font-size: 14px;
     51%, 100% { opacity: 0; }
 }
 
+/* El h5 mantiene su altura aunque el texto esté vacío (así no salta la página) */
 .hero-text h5 {
     min-height: 20px;
 }
 
-/*  Link del menu de la seccion actual  */
+/* ---------- Link del menú de la sección actual ---------- */
 .navlist a.active {
     border-bottom: 2px solid white;
     color: #9fd8e6;
 }
 
-/*  Boton "Copiar mail"  */
+/* ---------- Botón "Copiar mail" ---------- */
 .copy-btn {
     display: inline-flex;
     align-items: center;
@@ -581,13 +561,14 @@ font-size: 14px;
     background-color: #385e70;
 }
 
+/* El ícono dentro del botón no lleva el círculo de las otras tarjetas */
 .contact-card .copy-btn i {
     font-size: 14px;
     padding: 0;
     background: none;
 }
 
-/* Cuando ya se copio: verde */
+/* Cuando ya se copió: verde */
 .copy-btn.copied {
     border-color: #3ddc84;
     color: #3ddc84;
