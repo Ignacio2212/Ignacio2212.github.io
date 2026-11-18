@@ -1,0 +1,539 @@
+:root {
+    --verde: #00a651;        /* verde principal */
+    --verde-claro: #3ddc84;  /* verde para resaltar */
+    --azul: #1e6fd9;         /* acento azul (el 0.0) */
+    --fondo: #0b1410;        /* fondo general */
+    --tarjeta: #13221b;      /* fondo de las tarjetas */
+    --texto-suave: #b7c9bf;  /* texto secundario */
+}
+
+/*  NORMALIZACIÓN  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+}
+
+section {
+    padding: 100px 8%;
+}
+
+section[id] {
+    scroll-margin-top: 60px;
+}
+
+/*  HEADER  */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 4%;
+    background-color: rgba(11, 20, 16, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Escudo del header */
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.logo span {
+    color: var(--verde-claro);
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    margin-left: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .4s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid var(--verde-claro);
+}
+
+/*  HERO  */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at 70% 30%, #0f5e36 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, #123a66 0%, transparent 45%),
+                var(--fondo);
+}
+
+.hero h5 {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    line-height: 0;
+    margin-bottom: 35px;
+}
+
+/* Imagen principal del torneo */
+.hero-img {
+    width: 750px;
+    max-width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 50px rgba(0, 166, 81, 0.35);
+    transition: all .4s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+/* Etiquetas debajo del título (juego, modalidad, fecha) */
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.hero-tags span {
+    border: 1px solid var(--verde);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.hero-tags i {
+    color: var(--verde-claro);
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--verde);
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateY(-4px);
+}
+
+/*  TITULOS DE SECCION  */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h5 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--verde-claro);
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+}
+
+/*  FORMATO  */
+.format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.format-card {
+    background-color: var(--tarjeta);
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+
+.format-card:hover {
+    border: 1px solid var(--verde);
+    transform: translateY(-6px);
+}
+
+.format-card i {
+    font-size: 36px;
+    color: var(--verde-claro);
+}
+
+.format-card h3 {
+    font-size: 30px;
+    margin: 12px 0 6px;
+}
+
+.format-card p {
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+/*  LLAVES */
+.bracket-section {
+    background-color: #0e1a14;
+}
+
+/* En celular la llave se puede deslizar de costado */
+.bracket-wrapper {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.bracket {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    min-width: 800px;
+}
+
+/* Cada columna = una ronda */
+.round {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.round h4 {
+    text-align: center;
+    color: var(--verde-claro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los partidos */
+.matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    gap: 20px;
+}
+
+.match {
+    background-color: var(--tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #1f3a2c;
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    font-size: 15px;
+}
+
+.player + .player {
+    border-top: 1px solid #1f3a2c;
+}
+
+.player .score {
+    font-weight: 800;
+    color: var(--texto-suave);
+}
+
+.player.winner {
+    background-color: rgba(0, 166, 81, 0.18);
+}
+
+.player.winner .name,
+.player.winner .score {
+    color: var(--verde-claro);
+    font-weight: 800;
+}
+
+/* Tarjeta del campeon */
+.champion {
+    background: linear-gradient(135deg, var(--verde) 0%, #0f5e36 100%);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.champion i {
+    font-size: 50px;
+    color: #ffd54a;
+}
+
+.champion p {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 10px 0 5px;
+}
+
+.champion h3 {
+    font-size: 24px;
+}
+
+.bracket-hint {
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+/*  PODIO  */
+.podium-section {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 213, 74, 0.12) 0%, transparent 55%),
+                var(--fondo);
+}
+
+.podium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.podium-card {
+    background-color: var(--tarjeta);
+    border-radius: 18px;
+    padding: 20px;
+    border: 2px solid transparent;
+    transition: all .4s ease;
+}
+
+.podium-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Campeon: borde dorado */
+.podium-card.first {
+    border-color: #ffd54a;
+    box-shadow: 0 0 30px rgba(255, 213, 74, 0.2);
+}
+
+/* Subcampeon: borde plateado */
+.podium-card.second {
+    border-color: #c0c7cc;
+}
+
+.podium-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.podium-label i {
+    font-size: 30px;
+}
+
+.first .podium-label i,
+.first .podium-label span {
+    color: #ffd54a;
+}
+
+.second .podium-label i,
+.second .podium-label span {
+    color: #c0c7cc;
+}
+
+.podium .instagram-media {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.podium blockquote.instagram-media {
+    background-color: #0e1a14;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.podium blockquote.instagram-media a {
+    color: var(--verde-claro);
+}
+
+/*  REGLAMENTO  */
+.rules {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.rules li {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: var(--tarjeta);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.rules li i {
+    color: var(--verde-claro);
+    font-size: 22px;
+}
+
+/*  SPONSOR  */
+.sponsor {
+    text-align: center;
+    background-color: #0e1a14;
+}
+
+.sponsor-banner {
+    display: block;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    border: 1px solid #1f3a2c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sponsor p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    line-height: 1.8;
+}
+
+/*  GALERÍA  */
+.gallery {
+    display: grid;
+    /* columnas de mínimo 250px: en compu entran los 4 videos en fila, en celular 1 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    align-items: start; /* cada post mantiene su altura (los videos son más altos) */
+}
+
+.gallery .instagram-media {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.gallery blockquote.instagram-media {
+    background-color: var(--tarjeta);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery blockquote.instagram-media a {
+    color: var(--verde-claro);
+}
+
+/* Boton para ir a la cuenta de instagram */
+.ig-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.ig-link i {
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/*  FOOTER  */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #1f3a2c;
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer a {
+    color: var(--verde-claro);
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 768px) {
+    .navlist {
+        display: none;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero-img {
+        border-radius: 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
