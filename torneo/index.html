@@ -36,7 +36,13 @@
             <img src="img/logo-torneo.png" alt="Logo THE 0.0 LEAGUE">
             THE <span>0.0</span> LEAGUE
         </a>
-        <ul class="navlist">
+
+        <!-- Botón ☰ del menú en celular (lo hace funcionar torneo.js) -->
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú">
+            <i class="ri-menu-line"></i>
+        </button>
+
+        <ul class="navlist" id="navlist">
             <li><a href="#formato">Formato</a></li>
             <li><a href="#llaves">Llaves</a></li>
             <li><a href="#podio">Podio</a></li>
@@ -110,72 +116,8 @@
             <h5>Camino a la final</h5>
             <h2>Llaves</h2>
         </div>
-
         <div class="bracket-wrapper">
-            <div class="bracket">
-
-                <!-- CUARTOS DE FINAL -->
-                <div class="round">
-                    <h4>Cuartos</h4>
-                    <div class="matches">
-                        <div class="match">
-                            <div class="player"><span class="name">Fabiana</span></div>
-                            <div class="player winner"><span class="name">Lautaro</span><span class="score">Winner</span></div>
-                        </div>
-                        <div class="match">
-                            <div class="player winner"><span class="name">Santiago</span><span class="score">Winner</span></div>
-                            <div class="player"><span class="name">Ignacio</span></div>
-                        </div>
-                        <div class="match">
-                            <div class="player winner"><span class="name">Segundo</span><span class="score">Winner</span></div>
-                            <div class="player"><span class="name">Eleonora</span></div>
-                        </div>
-                        <div class="match">
-                            <div class="player winner"><span class="name">Matias</span><span class="score">Winner</span></div>
-                            <div class="player"><span class="name">Gonzalo</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SEMIFINALES -->
-                <div class="round">
-                    <h4>Semifinal</h4>
-                    <div class="matches">
-                        <div class="match">
-                            <div class="player"><span class="name">Lautaro</span></div>
-                            <div class="player winner"><span class="name">Santiago</span><span class="score">Winner</span></div>
-                        </div>
-                        <div class="match">
-                            <div class="player winner"><span class="name">Segundo</span><span class="score">Winner</span></div>
-                            <div class="player"><span class="name">Matias</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FINAL -->
-                <div class="round">
-                    <h4>Final</h4>
-                    <div class="matches">
-                        <div class="match">
-                            <div class="player winner"><span class="name">Santiago</span><span class="score">Winner</span></div>
-                            <div class="player"><span class="name">Segundo</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CAMPEON -->
-                <div class="round">
-                    <h4>Campeón</h4>
-                    <div class="matches">
-                        <div class="champion">
-                            <i class="ri-trophy-fill"></i>
-                            <p>Campeón</p>
-                            <h3>Santiago</h3>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <div class="bracket" id="bracket"></div>
         </div>
 
         <p class="bracket-hint">En celular, deslizá la llave hacia los costados</p>
@@ -241,7 +183,7 @@
             <h2>Sponsor</h2>
         </div>
 
-        <!-- Banner -->
+        <!--  Banner  -->
         <img src="img/sponsor-banner.png" alt="Heineken 0.0 presenta THE 0.0 LEAGUE: Arrancamos de cero. Jugamos por todo." class="sponsor-banner">
 
         <p>
@@ -298,5 +240,10 @@
         <p>Página hecha por <a href="../index.html">Ignacio Maidana</a></p>
     </footer>
 
+    <!--  Boton "volver arriba"  -->
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <script src="torneo.js"></script>
 </body>
 </html>

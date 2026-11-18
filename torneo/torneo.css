@@ -1,13 +1,13 @@
 :root {
-    --verde: #00a651;        /* verde principal */
-    --verde-claro: #3ddc84;  /* verde para resaltar */
-    --azul: #1e6fd9;         /* acento azul (el 0.0) */
-    --fondo: #0b1410;        /* fondo general */
-    --tarjeta: #13221b;      /* fondo de las tarjetas */
-    --texto-suave: #b7c9bf;  /* texto secundario */
+    --verde: #00a651;
+    --verde-claro: #3ddc84;
+    --azul: #1e6fd9;
+    --fondo: #0b1410;
+    --tarjeta: #13221b;
+    --texto-suave: #b7c9bf;
 }
 
-/*  NORMALIZACIÓN  */
+/*  NORMALIZACION  */
 * {
     padding: 0;
     margin: 0;
@@ -93,8 +93,7 @@ header {
     justify-content: center;
     text-align: center;
     background: radial-gradient(circle at 70% 30%, #0f5e36 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, #123a66 0%, transparent 45%),
-                var(--fondo);
+    radial-gradient(circle at 20% 80%, #123a66 0%, transparent 45%), var(--fondo);
 }
 
 .hero h5 {
@@ -123,7 +122,7 @@ header {
     transform: scale(1.02);
 }
 
-/* Etiquetas debajo del título (juego, modalidad, fecha) */
+/*  Etiquetas debajo del titulo  */
 .hero-tags {
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +250,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* Contenedor de los partidos */
+/*  Contenedor de los partidos  */
 .matches {
     display: flex;
     flex-direction: column;
@@ -293,7 +292,7 @@ header {
     font-weight: 800;
 }
 
-/* Tarjeta del campeon */
+/*  Tarjeta del campeon  */
 .champion {
     background: linear-gradient(135deg, var(--verde) 0%, #0f5e36 100%);
     border-radius: 15px;
@@ -326,8 +325,7 @@ header {
 
 /*  PODIO  */
 .podium-section {
-    background: radial-gradient(circle at 50% 0%, rgba(255, 213, 74, 0.12) 0%, transparent 55%),
-                var(--fondo);
+    background: radial-gradient(circle at 50% 0%, rgba(255, 213, 74, 0.12) 0%, transparent 55%), var(--fondo);
 }
 
 .podium {
@@ -453,13 +451,12 @@ header {
     line-height: 1.8;
 }
 
-/*  GALERÍA  */
+/*  GALERIA  */
 .gallery {
     display: grid;
-    /* columnas de mínimo 250px: en compu entran los 4 videos en fila, en celular 1 */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-    align-items: start; /* cada post mantiene su altura (los videos son más altos) */
+    align-items: start;
 }
 
 .gallery .instagram-media {
@@ -481,7 +478,7 @@ header {
     color: var(--verde-claro);
 }
 
-/* Boton para ir a la cuenta de instagram */
+/*  Boton para ir a la cuenta de instagram  */
 .ig-link {
     text-align: center;
     margin-top: 40px;
@@ -509,7 +506,29 @@ footer a {
 /*  RESPONSIVE  */
 @media (max-width: 768px) {
     .navlist {
-        display: none;
+        position: absolute;
+        top: 100%;
+        right: 4%;
+        flex-direction: column;
+        gap: 18px;
+        background-color: rgba(11, 20, 16, 0.97);
+        border: 1px solid #1f3a2c;
+        border-radius: 12px;
+        padding: 20px 30px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all .3s ease;
+    }
+
+    .navlist.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navlist a {
+        margin-left: 0;
     }
 
     section {
@@ -535,5 +554,78 @@ footer a {
 
     .section-title h2 {
         font-size: 30px;
+    }
+}
+
+/*  Solo en cel  */
+.menu-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: 1px solid #1f3a2c;
+    border-radius: 10px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+}
+
+.player .score i {
+    color: var(--verde-claro);
+    font-size: 18px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--verde);
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 166, 81, 0.4);
+    /* arranca escondido */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all .4s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--verde-claro);
+    transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
