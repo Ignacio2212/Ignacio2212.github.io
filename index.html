@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la web -->
+    <title>Ignacio Maidana</title>
+    <!-- Esta es la importación de nuestro archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <a href="#home" class="logo">Ignacio Maidana</a>
+
+        <!-- Menú responsive -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class='bx bx-menu' id="menu-icon"></div>
+        </label>
+
+        <!-- Navegación -->
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h5>Frontend Developer</h5>
+            <h1>Ignacio Maidana</h1>
+            <p>Aprendé todas las tecnologías conmigo y podrás obtener tu <br>
+                primer trabajo de desarrollador web al finalizar este curso.
+            </p>
+            <a href="#">CV</a>
+            <a href="#portfolio" class="videos"><i class="ri-play-fill"></i>Mirá mis trabajos</a>
+        </div>
+
+        <div class="hero-img">
+            <img src="#" alt="ignacio maidana foto">
+        </div>
+
+    </section>
+
+    <!-- ÍCONOS -->
+    <div class="icons">
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-github-fill"></i></a>
+    </div>
+
+    <!-- FLECHA -->
+    <div class="scroll-down">
+        <a href="#portfolio"><i class="ri-arrow-down-s-fill"></i></a>
+    </div>
+
+    <!-- PORTFOLIO / PROYECTOS -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-title">
+            <h5>Mis trabajos</h5>
+            <h2>Proyectos</h2>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <!--
+                PARA AGREGAR UN PROYECTO REAL, copiá este bloque y cambiá los datos:
+
+                <article class="project-card">
+                    <img src="img/mi-proyecto.jpg" alt="Captura de mi proyecto" class="project-img">
+                    <div class="project-info">
+                        <h3>Nombre del proyecto</h3>
+                        <p>Breve descripción de qué hace y con qué tecnologías lo hiciste.</p>
+                        <a href="LINK-AL-PROYECTO" target="_blank">Ver proyecto <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </article>
+
+                (Creá una carpeta "img" al lado del index.html y guardá ahí las capturas)
+            -->
+
+            <!-- Tarjetas de ejemplo hasta que tengas proyectos -->
+            <article class="project-card">
+                <div class="project-img placeholder"><i class="ri-image-line"></i></div>
+                <div class="project-info">
+                    <h3>Próximamente</h3>
+                    <p>Acá va a aparecer mi primer proyecto, con una captura y una breve descripción.</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-img placeholder"><i class="ri-image-line"></i></div>
+                <div class="project-info">
+                    <h3>Próximamente</h3>
+                    <p>Acá va a aparecer mi segundo proyecto, con una captura y una breve descripción.</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-img placeholder"><i class="ri-image-line"></i></div>
+                <div class="project-info">
+                    <h3>Próximamente</h3>
+                    <p>Acá va a aparecer mi tercer proyecto, con una captura y una breve descripción.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="about" id="sobre-mi">
+        <div class="section-title">
+            <h5>Conoceme</h5>
+            <h2>Sobre mí</h2>
+        </div>
+
+        <div class="about-content">
+            <p>
+                ¡Hola! Soy Ignacio, estudiante en UADE y apasionado por la tecnología. Me considero una
+                persona proactiva: cuando algo me interesa, no espero a que me lo enseñen, lo investigo
+                y lo pongo en práctica. Así fue como empecé a construir mis propias páginas web.
+            </p>
+            <p>
+                En la facultad trabajo con programación en Java, bases de datos y SQL, y también me formo
+                en gestión de esports, donde aprendí a organizar proyectos reales y trabajar en equipo.
+                Me gusta aprender cosas nuevas todo el tiempo y ahora estoy sumando JavaScript y Python
+                a mis herramientas.
+            </p>
+
+            <!-- Tecnologías -->
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>JavaScript (aprendiendo)</li>
+                <li>Python (aprendiendo)</li>
+            </ul>
+
+            <a href="#contacto" class="btn">Hablemos</a>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="section-title">
+            <h5>Hablemos</h5>
+            <h2>Contacto</h2>
+        </div>
+
+        <p class="contact-intro">
+            ¿Tenés un proyecto, una propuesta o simplemente querés charlar? Escribime por cualquiera de estos medios.
+        </p>
+
+        <!--
+            CAMBIÁ LOS DATOS DE EJEMPLO POR LOS TUYOS:
+            - En el href va el link (lo que pasa al hacer click)
+            - En el <span> va el texto que se ve
+        -->
+        <div class="contact-grid">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5491100000000" target="_blank" class="contact-card">
+                <i class="ri-whatsapp-line"></i>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <span>+54 9 11 0000-0000</span>
+                </div>
+            </a>
+
+            <!-- Celular -->
+            <a href="tel:+5491100000000" class="contact-card">
+                <i class="ri-phone-line"></i>
+                <div>
+                    <h3>Celular</h3>
+                    <span>+54 9 11 0000-0000</span>
+                </div>
+            </a>
+
+            <!-- Gmail -->
+            <a href="mailto:tumail@gmail.com" class="contact-card">
+                <i class="ri-mail-line"></i>
+                <div>
+                    <h3>Gmail</h3>
+                    <span>tumail@gmail.com</span>
+                </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/tu-usuario" target="_blank" class="contact-card">
+                <i class="ri-linkedin-box-line"></i>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <span>/in/tu-usuario</span>
+                </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/tu-usuario" target="_blank" class="contact-card">
+                <i class="ri-github-fill"></i>
+                <div>
+                    <h3>GitHub</h3>
+                    <span>@tu-usuario</span>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/tu-usuario" target="_blank" class="contact-card">
+                <i class="ri-instagram-line"></i>
+                <div>
+                    <h3>Instagram</h3>
+                    <span>@tu-usuario</span>
+                </div>
+            </a>
+
+            <!-- Ubicación -->
+            <div class="contact-card">
+                <i class="ri-map-pin-line"></i>
+                <div>
+                    <h3>Ubicación</h3>
+                    <span>Buenos Aires, Argentina</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Ignacio Maidana</p>
+    </footer>
+
+</body>
+
+</html>
